@@ -1,0 +1,37 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+
+// This import should be changed based on the prod dist location or
+// to node modules if theme emitter is consumed inside node modules
+@import "~theme-emitter/src/lib/theme-emitter.component";
+
+// Plus imports for other components in your app.
+@import './src/themes/base-theme';
+@import './src/app/app.component';
+
+
+// Include the common styles for Angular Material.
+@include mat-core();
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@mixin custom-components($theme) {
+  @include theme-emitter($theme);
+  @include app-theme($theme)
+}
+
+.theme {
+  @include angular-material-theme($theme);
+  @include custom-components($theme);
+}
+
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}

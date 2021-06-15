@@ -1,0 +1,57 @@
+@import '~@angular/material/theming';
+@import "/src/styles/_settings/global-settings";
+@import "/src/styles/_utilities/helper-classes";
+
+
+@mixin app-color($config-or-theme) {
+  $config: mat-get-color-config($config-or-theme);
+
+  $primary: map-get($config, primary);
+  $accent: map-get($config, accent);
+
+  .p-app-container {
+    .a-title {
+      color: mat-color($primary, 900);
+    }
+
+    background-color: mat-color($accent, 100);
+  }
+}
+
+@mixin app-typography($config-or-theme) {
+  $config: mat-get-typography-config($config-or-theme);
+
+  .p-app-container {
+    .a-title {
+      font: {
+        family: mat-font-family($config);
+        size: mat-font-size($config, display-2);
+        weight: mat-font-weight($config, display-2);
+      }
+    }
+  }
+}
+
+@mixin app-theme($theme) {
+  $color: mat-get-color-config($theme);
+  $typography: mat-get-typography-config($theme);
+
+  @if $color != null {
+    @include app-color($color);
+  }
+  @if $typography != null {
+    @include app-typography($typography);
+  }
+}
+
+.p-app-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  .a-title {
+    margin: 20px;
+    display: block;
+  }
+}
+

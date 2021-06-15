@@ -1,0 +1,11 @@
+@import '~@angular/material/theming';
+
+$font-family: "Roboto";
+$base-typography: mat-typography-config(
+  $display-2: mat-typography-level(24px, 28px, 700, $font-family, 0.0018em),
+  $display-1: mat-typography-level(20px, 23.44px, 500, $font-family, 0.0015em),
+  $subheading-2: mat-typography-level(16px, 28px, 700, $font-family, 0em),
+  $subheading-1: mat-typography-level(16px, 28px, 400, $font-family, 0em),
+  $body-2: mat-typography-level(14px, 20px, 700, $font-family, 0em),
+  $body-1: mat-typography-level(14px, 20px, 400, $font-family, 0em),
+);

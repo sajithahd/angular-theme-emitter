@@ -1,0 +1,12 @@
+$global-scroll-color: #c4c4c4;
+$global-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+
+// same as ng flex
+$global-breakpoints: (
+  'lt-xl' : 1920px,
+  'lg' : 1280px,
+  'gt-md' : 1280px,
+  'gt-sm' : 960px,
+  'gt-xs' : 600px,
+) !default;
+

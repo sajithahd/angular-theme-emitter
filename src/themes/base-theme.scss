@@ -1,0 +1,22 @@
+@import '~@angular/material/theming';
+
+@import "_settings/colors";
+@import "_settings/config";
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+$primary: mat-palette($base-primary-pallet);
+$accent: mat-palette($base-accent-pallet);
+$warn: mat-palette($mat-red);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$theme: mat-light-theme((
+  color: (
+    primary: $primary,
+    accent: $accent,
+    warn: $warn,
+  ),
+  typography:$base-typography
+));
+
+

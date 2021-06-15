@@ -1,4 +1,9 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<div class="theme">
+  <div class="p-app-container">
+    <span class="a-title">{{title}}</span>
+    <chart *ngIf="chartData" [chartData]="chartData"></chart>
+
+    <!--App body-->
+  </div>
+  <theme-emitter></theme-emitter>
+</div>
