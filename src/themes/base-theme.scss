@@ -1,7 +1,7 @@
 @import '~@angular/material/theming';
 
-@import "_settings/colors";
-@import "_settings/config";
+@import "settings/colors";
+@import "settings/config";
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 $primary: mat-palette($base-primary-pallet);
