@@ -1,7 +1,4 @@
 @import '~@angular/material/theming';
-@import "/src/styles/_settings/global-settings";
-@import "/src/styles/_utilities/helper-classes";
-
 
 @mixin app-color($config-or-theme) {
   $config: mat-get-color-config($config-or-theme);
