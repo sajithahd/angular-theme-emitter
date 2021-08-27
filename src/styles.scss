@@ -7,8 +7,8 @@
 @import "~theme-emitter/src/lib/theme-emitter.component";
 
 // Plus imports for other components in your app.
-@import './src/themes/base-theme';
-@import './src/app/app.component';
+@import './themes/base-theme.scss';
+@import './app/app.component.scss';
 
 
 // Include the common styles for Angular Material.
